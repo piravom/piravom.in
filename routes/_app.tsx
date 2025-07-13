@@ -1,5 +1,6 @@
 import { AppProps } from "$fresh/server.ts";
-import { Navbar } from "../components/Navbar.tsx";
+import { NavbarIsland } from "../islands/NavbarIsland.tsx";
+import { Footer } from "../components/Footer.tsx";
 
 export default function App({ Component }: AppProps) {
   return (
@@ -13,10 +14,11 @@ export default function App({ Component }: AppProps) {
       <body>
         <div>
           <div class="bg-white">
-            <Navbar />
+            <NavbarIsland />
             <Component />
           </div>
         </div>
+        <Footer />
       </body>
     </html>
   );
